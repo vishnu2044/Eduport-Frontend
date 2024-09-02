@@ -65,17 +65,15 @@ export const signup = createAsyncThunk(
       console.log("User signup response from auth slice", signupResponse)
 
       if (signupResponse && signupResponse.status) {
-        const user = signupResponse.response;
-
-
-
+        
         SuccessAlert({ message: signupResponse?.response?.message });
+        navigate('/login')
 
-        return user;  // Return user data for further processing in the slice
+        return signupResponse.response; 
+
       } else {
-        console.log('Status is false or response is not as expected from slice');
-        ErrorMessage({ message: signupData.message || 'Signup failed' });
-        return rejectWithValue(signupData.message || 'Signup failed');
+        ErrorMessage({ message: signupResponse?.response?.message || 'Signup failed' });
+        return rejectWithValue(signupResponse?.response?.message || 'Signup failed');
       }
     } catch (error) {
       console.log('Error occurred:', error);

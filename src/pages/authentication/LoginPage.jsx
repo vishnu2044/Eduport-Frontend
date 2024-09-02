@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import LoginForm from '../components/loginPage/LoginForm';
+import LoginForm from '../../components/loginPage/LoginForm';
 
 const LoginPage = () => {
   const loginImg = 'https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg';

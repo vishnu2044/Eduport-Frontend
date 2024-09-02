@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PiEyeBold, PiEyeClosedBold } from 'react-icons/pi';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { signup } from '../../services/redux/slices/AuthSlice';
+import { signup } from '../../../services/redux/slices/AuthSlice';
 
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -68,24 +68,27 @@ const SignUpForm = () => {
 
         <form onSubmit={handleSubmit}>
             <div className="flex mt-4 w-full">
-                <div className='w-full flex flex-col'>
-                    <input
+              <div className='w-full flex flex-col'>
+                <input
                     name='username'
                     value={formData.username}
                     onChange={handleChange}
-                    className={`w-full px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.username ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                    className={`w-full px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border 
+                        ${errors.username ? 'border-red-500' : 'border-gray-300'} 
+                        placeholder-gray-500 text-sm focus:outline-none focus:border-black focus:bg-white`}
                     type="text"
                     placeholder="Username"
-                    />
-                    {errors.username && <p className='text-red-400 text-xs mt-1'>{errors.username}</p>}
-                </div>
+                />
+                {errors.username && <p className='text-red-400 text-xs mt-1'>{errors.username}</p>}
+            </div>
+
 
                 <div className='w-full flex flex-col ml-2'>
                     <input
                     name='email'
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.email ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                    className={`w-full px-8 py-4 rounded-lg font-medium focus:border-black bg-gray-50 shadow-sm border ${errors.email ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                     type="email"
                     placeholder="Email"
                     />
@@ -100,7 +103,7 @@ const SignUpForm = () => {
                     name='firstName'
                     value={formData.firstName}
                     onChange={handleChange}
-                    className={`w-full px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                    className={`w-full px-8 py-4 rounded-lg font-medium focus:border-black bg-gray-50 shadow-sm border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                     type="text"
                     placeholder="First name"
                     />
@@ -111,7 +114,7 @@ const SignUpForm = () => {
                     name='lastName'
                     value={formData.lastName}
                     onChange={handleChange}
-                    className={`w-full ml-2 px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                    className={`w-full ml-2 px-8 py-4 rounded-lg font-medium focus:border-black bg-gray-50 shadow-sm border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                     type="text"
                     placeholder="Last name"
                     />
@@ -127,7 +130,7 @@ const SignUpForm = () => {
                     name='gender'
                     value={formData.gender}
                     onChange={handleChange}
-                    className={`w-full px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.gender ? 'border-red-500' : 'border-gray-300'} text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                    className={`w-full px-8 py-4 rounded-lg font-medium focus:border-black bg-gray-50 shadow-sm border ${errors.gender ? 'border-red-500' : 'border-gray-300'} text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                     aria-label="Select gender"
                     >
                     <option value="" disabled>Select Gender</option>
@@ -142,7 +145,7 @@ const SignUpForm = () => {
                     name='userType'
                     value={formData.userType}
                     onChange={handleChange}
-                    className={`w-full ml-2 px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.userType ? 'border-red-500' : 'border-gray-300'} text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                    className={`w-full ml-2 px-8 py-4 rounded-lg font-medium focus:border-black bg-gray-50 shadow-sm border ${errors.userType ? 'border-red-500' : 'border-gray-300'} text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                     aria-label="Select user type"
                     >
                     <option value="" disabled>Select User Type</option>
@@ -155,7 +158,7 @@ const SignUpForm = () => {
 
           <div className="flex mt-4 w-full">
             <div className='w-full flex flex-col ml-2'>
-                <div className={`w-full  flex justify-between px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.password || errors.passwordMissMatch ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                <div className={`w-full  flex justify-between px-8 py-4 rounded-lg focus:border-black font-medium bg-gray-50 shadow-sm border ${errors.password || errors.passwordMissMatch ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                 >
                     <input
                         name='password'
@@ -177,7 +180,7 @@ const SignUpForm = () => {
                     {errors.passwordMissMatch && <p className='text-red-400 text-xs mt-1'>{errors.passwordMissMatch}</p>}
             </div>
             <div className='w-full flex flex-col ml-2'>
-                <div className={`w-full flex justify-between px-8 py-4 rounded-lg font-medium bg-gray-50 shadow-sm border ${errors.confirmPassword || errors.passwordMissMatch ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
+                <div className={`w-full flex justify-between px-8 py-4 rounded-lg focus:border-black font-medium bg-gray-50 shadow-sm border ${errors.confirmPassword || errors.passwordMissMatch ? 'border-red-500' : 'border-gray-300'} placeholder-gray-500 text-sm focus:outline-none focus:border-gray-300 focus:bg-white`}
                 >
                     <input
                         name='confirmPassword'

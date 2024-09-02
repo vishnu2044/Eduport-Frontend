@@ -19,8 +19,8 @@ export const signupApi = async (signupData) => {
     }
   } catch (error) {
     if (error.response) {
-      console.log('API error response:', error.response.data);
-      return { 'status': false, message: error.response.data.message };
+      console.log('API error response:', error?.response?.data?.message);
+      return { 'status': false, response: error?.response?.data };
     } else {
       console.log('Network error:', error.message);
       return { 'status': false, message: error.message };
