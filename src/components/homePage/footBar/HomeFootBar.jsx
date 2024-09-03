@@ -4,107 +4,107 @@ const HomeFootBar = () => {
   return (
     <>
 
-<section class="pt-16 pb-7 bg-gray-900">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 pb-12 border-b-2 border-gray-700 max-lg:gap-7">
-        <div class="col-span-12 lg:col-span-7">
-          <h2 class="font-manrope font-bold text-3xl leading-tight text-white mb-2 max-lg:text-center">Newsletter</h2>
-          <p class="text-base text-gray-400 font-normal max-lg:text-center">Stay up to date with the latest update and announcement.</p>
+<section className="pt-16 pb-7 bg-gray-900">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-12 pb-12 border-b-2 border-gray-700 max-lg:gap-7">
+        <div className="col-span-12 lg:col-span-7">
+          <h2 className="font-manrope font-bold text-3xl leading-tight text-white mb-2 max-lg:text-center">Newsletter</h2>
+          <p className="text-base text-gray-400 font-normal max-lg:text-center">Stay up to date with the latest update and announcement.</p>
         </div>
-        <div class="col-span-12 lg:col-span-5 flex flex-col gap-4 items-center">
+        <div className="col-span-12 lg:col-span-5 flex flex-col gap-4 items-center">
           <div
-            class="flex items-center justify-between bg-gray-800 w-full max-w-md mx-auto lg:mr-0 rounded-full p-2.5 min-[470px]:p-1.5 pl-5 min-[470px]:pl-7 border border-gray-700 transition-all duration-300 hover:border-gray-400 focus-within:border-gray-400">
+            className="flex items-center justify-between bg-gray-800 w-full max-w-md mx-auto lg:mr-0 rounded-full p-2.5 min-[470px]:p-1.5 pl-5 min-[470px]:pl-7 border border-gray-700 transition-all duration-300 hover:border-gray-400 focus-within:border-gray-400">
             <input type="text"
-              class="bg-transparent text-base font-normal text-white placeholder:text-gray-500 focus-within:outline-0"
+              className="bg-transparent text-base font-normal text-white placeholder:text-gray-500 focus-within:outline-0"
               placeholder="Your email here..." />
             <button
-              class="py-3 px-7 hidden min-[470px]:block rounded-full bg-violet-500 text-base font-semibold text-white shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-0 hover:bg-violet-700 focus-within:bg-violet-700 ">Subscribe</button>
+              className="py-3 px-7 hidden min-[470px]:block rounded-full bg-violet-500 text-base font-semibold text-white shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-0 hover:bg-violet-700 focus-within:bg-violet-700 ">Subscribe</button>
           </div>
           <button
-          class="py-3 px-7 min-[470px]:hidden rounded-full bg-violet-500 text-base font-semibold text-white shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-0 hover:bg-violet-700 focus-within:bg-violet-700 ">Subscribe</button>
+          className="py-3 px-7 min-[470px]:hidden rounded-full bg-violet-500 text-base font-semibold text-white shadow-sm shadow-transparent transition-all duration-500 focus-within:outline-0 hover:bg-violet-700 focus-within:bg-violet-700 ">Subscribe</button>
         </div>
       </div>
-      <div class="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-4 gap-y-8 py-14 border-b-2 border-gray-700">
-        <div class="">
-          <h6 class="text-xl font-bold text-white mb-7">Pagedone</h6>
-          <ul class="flex flex-col gap-6">
+      <div className="grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-4 gap-y-8 py-14 border-b-2 border-gray-700">
+        <div className="">
+          <h6 className="text-xl font-bold text-white mb-7">Pagedone</h6>
+          <ul className="flex flex-col gap-6">
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Home</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Home</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">About</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">About</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pricing</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pricing</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Features</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Features</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pro
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Pro
                 Version</a></li>
           </ul>
         </div>
 
-        <div class="">
-          <h6 class="text-xl font-bold text-white mb-7">Products</h6>
-          <ul class="flex flex-col gap-6">
+        <div className="">
+          <h6 className="text-xl font-bold text-white mb-7">Products</h6>
+          <ul className="flex flex-col gap-6">
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Figma
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Figma
                 UI System</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Icons
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Icons
                 Assets</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Responsive
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Responsive
                 Blocks</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Components
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Components
                 Library</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
                 Guide</a></li>
           </ul>
         </div>
 
-        <div class="">
-          <h6 class="text-xl font-bold text-white mb-7">Resources</h6>
-          <ul class="flex flex-col gap-6">
+        <div className="">
+          <h6 className="text-xl font-bold text-white mb-7">Resources</h6>
+          <ul className="flex flex-col gap-6">
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">FAQs</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">FAQs</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Quick
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Quick
                 Start</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Documentation</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Documentation</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">User
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">User
                 Guide</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Plugin
                 Guide</a></li>
           </ul>
         </div>
 
-        <div class="">
-          <h6 class="text-xl font-bold text-white mb-7">Support</h6>
-          <ul class="flex flex-col gap-6">
+        <div className="">
+          <h6 className="text-xl font-bold text-white mb-7">Support</h6>
+          <ul className="flex flex-col gap-6">
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Customer
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Customer
                 Support</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Cookies</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Cookies</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">License</a>
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">License</a>
             </li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Terms
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Terms
                 & Conditions</a></li>
             <li><a href="javascript:;"
-                class="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Privacy
+                className="text-lg font-normal text-gray-400 transition-all duration-300 hover:text-violet-400 focus-within:outline-0 focus-within:text-violet-400">Privacy
                 Policy</a></li>
           </ul>
         </div>

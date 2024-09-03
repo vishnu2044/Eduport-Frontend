@@ -23,11 +23,9 @@ export const login = createAsyncThunk(
       console.log('User login is working');
       const userData = await loginApi(username, password);
 
-      // Check if the response contains user data
       if (userData && userData.response) {
         const user = userData.response;
         
-        // Storing user data in local storage
         if (user.user_profile.user_type === 'Instructor'){
           navigate('/instructor-panel')
         }else if (user.user_profile.user_type === 'Student'){
@@ -39,7 +37,7 @@ export const login = createAsyncThunk(
 
         SuccessAlert({ message: "User login successful!" });
 
-        return user;  // Return user data for further processing in the slice
+        return user;  
       } else {
         console.log("Status is false or response is not as expected from slice");
         ErrorMessage({ message: userData.message || 'Login failed' });
@@ -64,10 +62,13 @@ export const signup = createAsyncThunk(
 
       console.log("User signup response from auth slice", signupResponse)
 
-      if (signupResponse && signupResponse.status) {
+      if (signupResponse && signupResponse.status && signupResponse?.response?.email) {
         
         SuccessAlert({ message: signupResponse?.response?.message });
-        navigate('/login')
+        const userEamail = signupResponse?.response?.email
+        console.log("email :::::::::::", userEamail)
+        
+        navigate('/signup-otp', {state: {email: userEamail}})
 
         return signupResponse.response; 
 
@@ -81,6 +82,8 @@ export const signup = createAsyncThunk(
     }
   }
 );
+
+export 
 
 
 
@@ -102,6 +105,7 @@ const authSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
+      //Loign section
       .addCase(login.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -122,6 +126,7 @@ const authSlice = createSlice({
         state.error = action.payload;
       })
 
+      // Signup Section
       .addCase(signup.pending, (state) => {
         state.loading = true;
         state.error = null;

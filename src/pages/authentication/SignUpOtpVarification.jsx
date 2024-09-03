@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SignupOtpVerificationForm from '../../components/authentication/signUpOtp/SignupOtpVerificationForm';
+import { useLocation } from 'react-router-dom';
+import ErrorAlertBox from '../../components/AlertBoxes/ErrorAlertBox';
+import { SuccessAlert } from '../../components/alertMessages/SuccessAlert';
 
 const SignUpOtpVarification = () => {
+  const location = useLocation()
+  const userEmail = location.state?.email
+
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
       <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
@@ -13,9 +19,10 @@ const SignUpOtpVarification = () => {
               className="w-32 mx-auto"
             />
           </div>
+          email : {userEmail}
           <div className="mt-12 flex flex-col items-center">
-            <h1 className="text-2xl xl:text-3xl font-extrabold">OTP Varification</h1>
-            <SignupOtpVerificationForm />
+            <h1  className="text-2xl xl:text-3xl font-extrabold">OTP Varification</h1>
+            <SignupOtpVerificationForm userEmail={userEmail} />
           </div>
         </div>
       </div>
